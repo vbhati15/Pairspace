@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -15,38 +13,58 @@ body {
   flex-direction: column;
 }
 
+/* Header */
 .app-header {
-  padding: 16px 24px;
+  padding: 12px 24px;
   border-bottom: 1px solid #2d2d44;
   background: #16161f;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .app-header h1 {
   margin: 0;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   color: #818cf8;
+  letter-spacing: -0.3px;
 }
 
 .subtitle {
-  margin: 4px 0 0;
-  font-size: 13px;
-  color: #9ca3af;
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
 }
 
+/* Editor wrapper */
 .editor-wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
+/* Toolbar */
 .editor-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
+  padding: 8px 16px;
   background: #16161f;
   border-bottom: 1px solid #2d2d44;
+  gap: 12px;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .editor-toolbar select {
@@ -54,11 +72,66 @@ body {
   color: #e4e4e7;
   border: 1px solid #3f3f5a;
   border-radius: 6px;
-  padding: 6px 10px;
+  padding: 5px 10px;
   font-size: 13px;
+  cursor: pointer;
 }
 
-.room-status {
+.room-id {
   font-size: 12px;
-  color: #f59e0b;
+  color: #6b7280;
+  font-family: monospace;
+}
+
+/* Active user badges */
+.active-users {
+  display: flex;
+  gap: 4px;
+}
+
+.user-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  cursor: default;
+}
+
+/* Share button */
+.share-btn {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.share-btn:hover {
+  background: #6366f1;
+}
+
+/* Status dot */
+.status-dot {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Footer */
+.editor-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 16px;
+  background: #16161f;
+  border-top: 1px solid #2d2d44;
+  font-size: 12px;
+  color: #6b7280;
 }
